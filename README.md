@@ -18,6 +18,8 @@ Each day you’ll tackle:
 > **🚫 No AI Allowed!**
 > These exercises are meant to be solved **without** generative assistance—treat each as a personal whiteboard session to build intuition and speed.
 
+> Generative AI is permitted for future problem starter code and test code generation
+
 ---
 
 ## 📂 Repository Structure
@@ -25,7 +27,7 @@ Each day you’ll tackle:
 Each day's folder is organized as:
 
 ```
-Day<N>/
+Day<N>_<Problem_Name>/
   ├── starter.ts        # Stub code and problem description
   ├── solution.ts       # Your completed implementation
   └── tests.ts          # Test harness to validate your solution
@@ -34,16 +36,16 @@ Day<N>/
 For example:
 
 ```
-Day1/
+Day1_NotificationFloodFill/
   ├── starter.ts
   ├── solution.ts
   └── tests.ts
-Day2/
+Day2_ConfigCycleDetection/
   ├── starter.ts
   ├── solution.ts
   └── tests.ts
 ...
-Day10/
+Day10_<Name>/
   ├── starter.ts
   ├── solution.ts
   └── tests.ts
@@ -77,7 +79,7 @@ This structure keeps starter code, your solution, and tests together for each da
 
 4. **Implement your solution**
 
-   * Open the stubbed `.ts` file, fill in the `// TODO` section.
+   * Copy over `starter.ts` code into `solution.ts` and begin implementing your solution
    * Run the test harness again to verify correctness.
 
 ---

@@ -57,21 +57,21 @@ async function main() {
 
   // 3. Build the ChatGPT prompt
   const areas = [
-    "arrays", "two‑pointer", "sliding‑window", "matrix", "hashmap",
+    "two‑pointer", "sliding‑window", "matrix", "hashmap",
     "intervals", "stack", "linked list", "binary tree", "graphs",
-    "BFS", "DFS", "backtracking", "divide & conquer", "Dynamic programming"
+    "BFS", "DFS", "backtracking", "divide & conquer", "dynamic programming"
   ].join(", ");
 
   const prompt = `
 You are a code challenge designing bot. 
 We already have Day folders covering: ${coveredTopics.join(", ") || "none"}.
 Please generate the next daily challenge (Day${nextDay}) in a "LeetCode wrapped in a practical work scenario" style.  
-The challange description and code should emulate the language we would see in a work environment. Do not instruct the user what algorithms to use. For example if the problem is a matrix rotation, the problem should be described as something like "image rotation".
+The challange description and code should emulate the language we would see in a work environment. Do not include language in the description or starter code about what data structures / algorithms to use - DO use language that describes the goal from a high level, employing real-world concepts. Name the starter function accordingly.  
 Algorithm areas to cover: ${areas}.  
 Respond with a pure JSON object with exactly these fields:
 {
   "folderName": "Day${nextDay}_ProblemName",
-  "starterTs": "...full starter.ts contents including description, two LeetCode warm‑ups relating to the topic of the problem, and function stub with TODOs...",
+  "starterTs": "...full starter.ts contents including description, two LeetCode warm‑ups (one easy/medium, one medium/hard) relating to the topic of the problem, and function stub with TODOs...",
   "testsTs": "...full tests.ts contents with harness for edge cases and typical scenarios..."
 }
 Respond _only_ with a single JSON object. Make sure it's valid JSON:  

@@ -74,10 +74,14 @@ Respond with a pure JSON object with exactly these fields:
   "starterTs": "...full starter.ts contents including description, two LeetCode warm‑ups (one easy/medium, one medium/hard) relating to the topic of the problem, and function stub with TODOs...",
   "testsTs": "...full tests.ts contents with harness for edge cases and typical scenarios..."
 }
-Respond _only_ with a single JSON object. Make sure it's valid JSON:  
-- Use \n for newlines inside strings  
-- Escape any " inside strings as \"  
-- Do not include any raw line breaks in your string literals 
+Output **only** a JSON object.  
+- Use double‑quotes for all JSON keys and string‑values.  
+- Inside each string value (starterTs, testsTs), **escape**:
+    • newlines as \n  
+    • tabs as \t  
+    • backslashes as \\  
+    • double‑quotes as \"  
+No extra text or markdown fences—just the JSON. Keep lines in starter.ts description no longer than 100 characters before adding a newline
 `;
 
   // 4. & 5. Call OpenAI

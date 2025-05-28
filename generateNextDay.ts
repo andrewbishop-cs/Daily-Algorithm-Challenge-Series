@@ -74,7 +74,7 @@ Respond with a pure JSON object with exactly these fields:
   "starterTs": "...full starter.ts contents including description, two LeetCode warm‑ups (one easy/medium, one medium/hard) relating to the topic of the problem and function stub. were needed add // TODO: implement code here",
   "testsTs": "...full tests.ts contents with harness for edge cases and typical scenarios. do not use any library, just compare inputs and outputs and print accordingly..."
 }
-Export the stub function created in starter.ts, import it for test usage in tests.ts (use this format: import functionName from './starter';)- use green check mark emoji if the test passes, and red X emoji if it does not. 
+Export the stub function created in starter.ts, import it for test usage in tests.ts (use this format: import functionName from './solution';)- use green check mark emoji if the test passes, and red X emoji if it does not. 
 Output **only** a JSON object.  
 - Use double‑quotes for all JSON keys and string‑values.  
 - Inside each string value (starterTs, testsTs), **escape**:

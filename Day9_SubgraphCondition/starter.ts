@@ -14,6 +14,10 @@ nodes it connects. The function should return true if the condition is met for a
 
 Assume nodes are numbered from 1 to n.
 
+Leetcode warmup:
+- Graph Valid Tree (LC 261)
+- Number of Connected Components in an Undirected Graph (LC 323)
+
 
 */
 // TODO: implement the function with below signature

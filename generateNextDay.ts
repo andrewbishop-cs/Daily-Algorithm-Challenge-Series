@@ -56,10 +56,14 @@ async function main() {
 
 
   // 3. Build the ChatGPT prompt
+//   const areas = [
+//     "two‑pointer", "sliding‑window", "matrix", "hashmap",
+//     "intervals", "stack", "linked list", "binary tree", "graphs",
+//     "BFS", "DFS", "backtracking", "divide & conquer", "dynamic programming"
+//   ].join(", ");
+
   const areas = [
-    "two‑pointer", "sliding‑window", "matrix", "hashmap",
-    "intervals", "stack", "linked list", "binary tree", "graphs",
-    "BFS", "DFS", "backtracking", "divide & conquer", "dynamic programming"
+    "sliding‑window", "graphs", "BFS", "DFS", "backtracking", "divide & conquer", "dynamic programming"
   ].join(", ");
 
   const prompt = `

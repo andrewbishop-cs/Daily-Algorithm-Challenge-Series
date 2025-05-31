@@ -1,25 +1,24 @@
 import { TimeBasedKeyValueStore } from './solution';
 
-// Successful test cases
+// Helper function to format test results
+function runTest(actual: string, expected: string, testName: string): void {
+    const passed = actual === expected;
+    console.log(`Test ${testName}:`);
+    console.log(`  Expected: "${expected}"`);
+    console.log(`  Got:      "${actual}"`);
+    console.log(`  Result:   ${passed ? '✅' : '❌'}\n`);
+}
+
+// Test cases
 let kv = new TimeBasedKeyValueStore();
 kv.set('foo', 'bar', 1);
-let test1 = kv.get('foo', 1) === 'bar' ? '✅' : '❌';
-console.log(`Test1 result: ${test1}`);
-
-let test2 = kv.get('foo', 3) === 'bar' ? '✅' : '❌';
-console.log(`Test2 result: ${test2}`);
-
+runTest(kv.get('foo', 1), 'bar', '1: Get exact timestamp');
+runTest(kv.get('foo', 3), 'bar', '2: Get future timestamp');
 kv.set('foo', 'bar2', 4);
-let test3 = kv.get('foo', 4) === 'bar2' ? '✅' : '❌';
-console.log(`Test3 result: ${test3}`);
-
-let test4 = kv.get('foo', 5) === 'bar2' ? '✅' : '❌';
-console.log(`Test4 result: ${test4}`);
+runTest(kv.get('foo', 4), 'bar2', '3: Get new value at exact timestamp');
+runTest(kv.get('foo', 5), 'bar2', '4: Get new value at future timestamp');
 
 // Edge cases
 let kv2 = new TimeBasedKeyValueStore();
-let test5 = kv2.get('key_not_set', 1) === '' ? '✅' : '❌';
-console.log(`Test5 result: ${test5}`);
-
-let test6 = kv.get('foo', 0) === '' ? '✅' : '❌';
-console.log(`Test6 result: ${test6}`);
+runTest(kv2.get('key_not_set', 1), '', '5: Get non-existent key');
+runTest(kv.get('foo', 0), '', '6: Get timestamp before any value');

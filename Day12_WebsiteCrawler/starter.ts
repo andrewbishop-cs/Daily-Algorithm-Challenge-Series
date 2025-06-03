@@ -17,7 +17,8 @@ Additionally:
 4. You can assume the rootURL will always be reachable and will always be a well-formatted URL.
 */
 
-export function crawlWebsite(rootURL: string) {
-  // TODO: implement your code here
+export function crawlWebsite(rootURL: string): string[] {
+    // TODO: implement your code here
+    return []
 }
 

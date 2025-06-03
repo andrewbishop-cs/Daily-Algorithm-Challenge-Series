@@ -15,6 +15,11 @@ Additionally:
 2. Only consider http:// and https:// as valid schemas. URLs are case sensitive.
 3. You can assume getLinks function will always return a list. The list can be empty.
 4. You can assume the rootURL will always be reachable and will always be a well-formatted URL.
+
+Leetcode warmups:
+- 200. Number of Islands
+- 329. Longest Increasing Path in a Matrix
+
 */
 
 export function crawlWebsite(rootURL: string): string[] {

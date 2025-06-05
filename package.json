@@ -1,6 +1,10 @@
 {
   "dependencies": {
     "dotenv": "^16.5.0",
+    "js-priority-queue": "^0.1.5",
     "openai": "^4.103.0"
+  },
+  "devDependencies": {
+    "@types/js-priority-queue": "^0.0.9"
   }
 }

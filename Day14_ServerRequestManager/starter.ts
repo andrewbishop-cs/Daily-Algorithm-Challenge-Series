@@ -15,7 +15,7 @@ processing requests as soon as possible. You need to return the completion time 
 of their arrival. If two or more requests finish at the same time, the next request should start in the order 
 they are in the queue.
 
-Example: serverRequestManager([1,2,3,4,5,6], 3) should return [1,2,3,4,5,6]
+Example: serverRequestManager([1,2,3,4,5,6], 3) should return [1,2,3,5,7,9]
 
 Warm-up challenges:
 - LeetCode easy/medium: 621. Task Scheduler

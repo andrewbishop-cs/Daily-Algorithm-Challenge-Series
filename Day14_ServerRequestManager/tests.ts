@@ -1,12 +1,13 @@
 import { serverRequestManager } from './solution';
 
 const testCases: Array<[number[], number, number[]]> = [
-  [[1,2,3,4,5,6], 3, [1,2,3,4,5,6]],
+  [[1,2,3,4,5,6], 3, [1,2,3,5,7,9]],
   [[2,2,2,2,2,2], 3, [2,2,2,4,4,4]],
   [[6,5,4,3,2,1], 1, [6,11,15,18,20,21]],
-  [[2,3,1,2], 2, [2,3,4,5]],
+  [[2,3,1,2], 2, [2,3,3,5]],
   [[], 2, []]
 ];
+
 
 for (let i = 0; i < testCases.length; i++) {
   const [requests, maxSimultaneousRequests, expected] = testCases[i];

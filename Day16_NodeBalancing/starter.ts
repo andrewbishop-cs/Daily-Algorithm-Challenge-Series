@@ -19,6 +19,11 @@ Should return: new Map([['A', ['B', 'C']], ['B', ['A', 'C']], ['C', ['A', 'B']]]
 Constraints:
 - There will be no more than 10^5 nodes.
 - Each node will have at least one connection.
+
+Warmup:
+- LeetCode 323. Number of Connected Components in an Undirected Graph
+- LeetCode 785. Is Graph Bipartite?
+
 */
 
 const balanceNodes = (nodes: Map<string, string[]>): Map<string, string[]> => {

@@ -12,6 +12,11 @@ Input: a Map where keys are string representing a dependency and values are arra
 of strings representing the dependencies of the associated key.
 
 Output: an array of strings representing the order in which to install the dependencies.
+
+LC warmup:
+	207 - Course Schedule
+	802 - Find Eventual Safe States
+
 */
 
 export function getInstallationOrder(dependencies: Map<string, string[]>): string[] {

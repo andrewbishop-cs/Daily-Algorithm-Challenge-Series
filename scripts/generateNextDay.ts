@@ -64,13 +64,14 @@ async function main() {
   ].join(", ");
 
 
-//We already have Day folders covering: ${coveredTopics.join(", ") || "none"}.
+
   const prompt = `
 You are a code challenge designing bot. 
 
 Please generate the next daily challenge (Day${nextDayFormatted}) in a "LeetCode wrapped in a practical work scenario" style.  
 The challange description and code should emulate the language we would see in a work environment. Do not include language in the description or starter code about what data structures / algorithms to use - DO use language that describes the goal from a high level, employing real-world concepts. Name the starter function accordingly.  
 Algorithm areas to cover: ${areas}.  
+We already have Day folders covering: ${coveredTopics.join(", ") || "none"}.
 Respond with a pure JSON object with exactly these fields:
 {
   "folderName": "Day${nextDayFormatted}_ProblemName",

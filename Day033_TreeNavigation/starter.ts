@@ -14,7 +14,7 @@ the start node value and the end node value. It should return the path in a list
 from the start node to the end node (both inclusive). If there's no such path, return an empty array.
 */
 
-class TreeNode {
+export class TreeNode {
     val: number
     left: TreeNode | null
     right: TreeNode | null
